@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Qm-ub-QIA">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="MSApps_Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5LG-KK-Sjt" customClass="GradientView" customModule="MSApps_Movies" customModuleProvider="target">
+                                <rect key="frame" x="107" y="445.66666666666669" width="200" height="85.000000000000057"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get started!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbR-bh-Mth">
+                                        <rect key="frame" x="24" y="25.333333333333318" width="152" height="34.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="26"/>
+                                        <color key="textColor" red="0.23137254901960785" green="0.70588235294117641" blue="0.75686274509803919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="clT-e1-LVS"/>
+                                    <constraint firstItem="wbR-bh-Mth" firstAttribute="centerY" secondItem="5LG-KK-Sjt" secondAttribute="centerY" id="pGy-TD-6rr"/>
+                                    <constraint firstAttribute="height" constant="85" id="qRX-DF-NII"/>
+                                    <constraint firstItem="wbR-bh-Mth" firstAttribute="centerX" secondItem="5LG-KK-Sjt" secondAttribute="centerX" id="sdA-6G-TJN"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" red="0.96470588235294119" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wy4-IN-VKY" appends="YES" id="YSR-5c-IaK"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MSApps movie exercise by Nitzan Mor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeB-Ny-aPq">
+                                <rect key="frame" x="16" y="104" width="382" height="173"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="44"/>
+                                <color key="textColor" red="0.015686274509803921" green="0.53725490196078429" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LeB-Ny-aPq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="4MK-e7-GAH"/>
+                            <constraint firstItem="LeB-Ny-aPq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="I2q-kz-3Sw"/>
+                            <constraint firstItem="5LG-KK-Sjt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="40" id="bEm-JA-qgs"/>
+                            <constraint firstItem="5LG-KK-Sjt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ejp-U6-7vm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LeB-Ny-aPq" secondAttribute="trailing" constant="16" id="zmg-Ma-I4A"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8k8-70-t53"/>
+                    <connections>
+                        <segue destination="ctF-D7-SvM" kind="show" identifier="showMovies" id="9fk-D4-YU8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wy4-IN-VKY">
+                    <connections>
+                        <action selector="moviesTapped:" destination="BYZ-38-t0r" id="bnA-r9-PTP"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="107.8125"/>
+        </scene>
+        <!--Movies Table View Controller-->
+        <scene sceneID="BTM-7Q-gKW">
+            <objects>
+                <tableViewController id="ctF-D7-SvM" customClass="MoviesTableViewController" customModule="MSApps_Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="q4n-s9-3tV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="270" id="ZJg-eZ-fPM" customClass="MoviesTableViewCell" customModule="MSApps_Movies" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="270"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZJg-eZ-fPM" id="YUs-gD-QRe">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="270"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ec-gS-rIq">
+                                            <rect key="frame" x="36" y="43" width="342" height="26.333333333333329"/>
+                                            <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="20"/>
+                                            <color key="textColor" red="0.015686274509803921" green="0.53725490196078429" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rGC-Yb-cfU">
+                                            <rect key="frame" x="36" y="144" width="196" height="99"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="year" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btY-KF-vNn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="196" height="22.333333333333332"/>
+                                                    <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                                    <color key="textColor" red="0.23137254901960785" green="0.70588235294117641" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rating" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBe-wv-gCY">
+                                                    <rect key="frame" x="0.0" y="38.333333333333343" width="196" height="22.333333333333329"/>
+                                                    <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                                    <color key="textColor" red="0.23137254900000001" green="0.70588235290000001" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="genres" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFe-mx-GTG">
+                                                    <rect key="frame" x="0.0" y="76.666666666666657" width="196" height="22.333333333333329"/>
+                                                    <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                                    <color key="textColor" red="0.23137254900000001" green="0.70588235290000001" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yJH-j1-MTK">
+                                            <rect key="frame" x="248" y="113" width="130" height="130"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="130" id="I8l-Ap-1Hk"/>
+                                                <constraint firstAttribute="height" constant="130" id="qla-ur-q9n"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="yJH-j1-MTK" secondAttribute="bottom" constant="16" id="P0J-aR-phH"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="0ec-gS-rIq" secondAttribute="trailing" constant="16" id="WQf-Pj-kyZ"/>
+                                        <constraint firstItem="0ec-gS-rIq" firstAttribute="leading" secondItem="YUs-gD-QRe" secondAttribute="leadingMargin" constant="16" id="XTy-d4-Yia"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="rGC-Yb-cfU" secondAttribute="bottom" constant="16" id="ehu-Tz-aJA"/>
+                                        <constraint firstItem="rGC-Yb-cfU" firstAttribute="leading" secondItem="YUs-gD-QRe" secondAttribute="leadingMargin" constant="16" id="gq2-UI-ic2"/>
+                                        <constraint firstItem="0ec-gS-rIq" firstAttribute="top" secondItem="YUs-gD-QRe" secondAttribute="topMargin" constant="32" id="uf6-SV-qtZ"/>
+                                        <constraint firstItem="yJH-j1-MTK" firstAttribute="leading" secondItem="rGC-Yb-cfU" secondAttribute="trailing" constant="16" id="xiI-hl-rHS"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="yJH-j1-MTK" secondAttribute="trailing" constant="16" id="yL6-dd-BUc"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="movieGenresLabel" destination="VFe-mx-GTG" id="ZC0-dz-Ulq"/>
+                                    <outlet property="movieImageView" destination="yJH-j1-MTK" id="Jju-1K-83Z"/>
+                                    <outlet property="movieRatingLabel" destination="RBe-wv-gCY" id="bQd-xg-fic"/>
+                                    <outlet property="movieTitleLabel" destination="0ec-gS-rIq" id="nZw-zq-CbP"/>
+                                    <outlet property="movieYearLabel" destination="btY-KF-vNn" id="HsO-N7-Bfs"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ctF-D7-SvM" id="i6P-iH-WMu"/>
+                            <outlet property="delegate" destination="ctF-D7-SvM" id="k4A-8o-bU0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Nz0-gg-8v8"/>
+                    <connections>
+                        <segue destination="0Zi-9f-1y1" kind="show" identifier="showSpecific" id="ngu-uT-bnt"/>
+                        <segue destination="RHe-Ph-Zb8" kind="show" identifier="scanQR" id="TXE-sa-BRo"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="er9-9K-5Ru" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1915.9420289855075" y="107.8125"/>
+        </scene>
+        <!--ScanQR View Controller-->
+        <scene sceneID="Xsi-ak-Aw1">
+            <objects>
+                <viewController id="RHe-Ph-Zb8" customClass="ScanQRViewController" customModule="MSApps_Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZRK-TU-Ddd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="oXb-yh-Usb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NkK-mD-TB1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y0A-hb-BgX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2913" y="516"/>
+        </scene>
+        <!--Specific Movie View Controller-->
+        <scene sceneID="XvO-Mt-J7S">
+            <objects>
+                <viewController id="0Zi-9f-1y1" customClass="SpecificMovieViewController" customModule="MSApps_Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b8t-rM-Vs1" customClass="GradientView" customModule="MSApps_Movies" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrm-w6-7C6">
+                                <rect key="frame" x="32" y="120" width="350" height="33"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="25"/>
+                                <color key="textColor" red="0.015686274510000001" green="0.53725490200000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="year" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pe1-We-Oq9">
+                                <rect key="frame" x="32" y="185" width="350" height="26.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="20"/>
+                                <color key="textColor" red="0.23137254900000001" green="0.70588235290000001" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rating" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bj-9N-UYq">
+                                <rect key="frame" x="32" y="243.33333333333334" width="350" height="26.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="20"/>
+                                <color key="textColor" red="0.23137254900000001" green="0.70588235290000001" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="genres" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSc-Dp-bnU">
+                                <rect key="frame" x="32" y="301.66666666666669" width="350" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="20"/>
+                                <color key="textColor" red="0.23137254900000001" green="0.70588235290000001" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bYP-ba-KkY">
+                                <rect key="frame" x="82" y="392" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="AHd-8F-xzL"/>
+                                    <constraint firstAttribute="width" constant="250" id="ztD-Rm-yqv"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9se-ct-ST9" firstAttribute="trailing" secondItem="eSc-Dp-bnU" secondAttribute="trailing" constant="32" id="6Oh-qa-uUT"/>
+                            <constraint firstItem="eSc-Dp-bnU" firstAttribute="leading" secondItem="9se-ct-ST9" secondAttribute="leading" constant="32" id="7hG-Ba-qTj"/>
+                            <constraint firstItem="bYP-ba-KkY" firstAttribute="centerX" secondItem="b8t-rM-Vs1" secondAttribute="centerX" id="FKu-AB-5Qa"/>
+                            <constraint firstItem="9se-ct-ST9" firstAttribute="trailing" secondItem="wrm-w6-7C6" secondAttribute="trailing" constant="32" id="I7n-x1-xa1"/>
+                            <constraint firstItem="bYP-ba-KkY" firstAttribute="top" secondItem="eSc-Dp-bnU" secondAttribute="bottom" constant="64" id="J6i-2P-BLg"/>
+                            <constraint firstItem="eSc-Dp-bnU" firstAttribute="top" secondItem="7bj-9N-UYq" secondAttribute="bottom" constant="32" id="Jjm-jI-Ddn"/>
+                            <constraint firstItem="Pe1-We-Oq9" firstAttribute="top" secondItem="wrm-w6-7C6" secondAttribute="bottom" constant="32" id="MII-0p-UHx"/>
+                            <constraint firstItem="wrm-w6-7C6" firstAttribute="leading" secondItem="9se-ct-ST9" secondAttribute="leading" constant="32" id="Rf4-gc-6rP"/>
+                            <constraint firstItem="9se-ct-ST9" firstAttribute="trailing" secondItem="Pe1-We-Oq9" secondAttribute="trailing" constant="32" id="WHh-Mz-jMp"/>
+                            <constraint firstItem="7bj-9N-UYq" firstAttribute="top" secondItem="Pe1-We-Oq9" secondAttribute="bottom" constant="32" id="YLc-9e-ozM"/>
+                            <constraint firstItem="Pe1-We-Oq9" firstAttribute="leading" secondItem="9se-ct-ST9" secondAttribute="leading" constant="32" id="auj-VZ-XMf"/>
+                            <constraint firstItem="wrm-w6-7C6" firstAttribute="top" secondItem="9se-ct-ST9" secondAttribute="top" constant="32" id="mUl-HT-Lia"/>
+                            <constraint firstItem="9se-ct-ST9" firstAttribute="trailing" secondItem="7bj-9N-UYq" secondAttribute="trailing" constant="32" id="wrv-sd-Kpd"/>
+                            <constraint firstItem="7bj-9N-UYq" firstAttribute="leading" secondItem="9se-ct-ST9" secondAttribute="leading" constant="32" id="zY3-vN-NFf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9se-ct-ST9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UsS-Ql-zyP"/>
+                    <connections>
+                        <outlet property="movieGenreLabel" destination="eSc-Dp-bnU" id="IfQ-ya-A0d"/>
+                        <outlet property="movieImageView" destination="bYP-ba-KkY" id="sCO-3F-Tak"/>
+                        <outlet property="movieRatingLabel" destination="7bj-9N-UYq" id="Sdr-1c-h39"/>
+                        <outlet property="movieReleaseYearLabel" destination="Pe1-We-Oq9" id="WVE-lx-B0y"/>
+                        <outlet property="movieTitleLabel" destination="wrm-w6-7C6" id="Mmn-fQ-0Iu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yQ2-la-VlE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2913" y="-213"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9hP-oU-57z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Qm-ub-QIA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eCP-4l-raR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YEI-CJ-M3R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hWA-5t-uDm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
+        </scene>
+    </scenes>
+</document>
