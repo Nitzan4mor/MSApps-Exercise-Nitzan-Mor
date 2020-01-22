@@ -27,8 +27,7 @@ class DAO{
         }
             // else decode json save to core data and fetch movies again
         else {
-            decodeJson()
-            fetchAllMovies(delegate: delegate)
+            decodeJson(delegate: delegate)
         }
     }
     
@@ -50,27 +49,31 @@ class DAO{
         return movie
     }
     
-    // parsing array of json objects from QR code and saving them in core data
-    private func decodeJson(){
-        guard let url = Bundle.main.url(forResource: "movies", withExtension: "json") else {return}
-        guard let data = try? Data(contentsOf: url) else {return}
-        guard let jsonArray = try? JSONSerialization.jsonObject(with: data, options: []) as? Array<JSON> else {return}
-        for i in 0..<jsonArray.count{
-            let movie = Movie(context: context)
-            movie.title = jsonArray[i]["title"] as? String
-            movie.image = jsonArray[i]["image"] as? String
-            movie.rating = jsonArray[i]["rating"] as? Double ?? 0.0
-            movie.releaseYear = jsonArray[i]["releaseYear"] as? Int32 ?? 0
-            for string in jsonArray[i]["genre"] as? [String] ?? []{
-                let genre = Genre(context: context)
-                genre.genre = string
-                movie.addToGenres(genre)
+    // parsing array of json objects from url using URL Session, saving them in core data and calling fetchAllMovies func again
+    private func decodeJson(delegate:DAODelegate){
+        guard let url = URL(string: "https://api.androidhive.info/json/movies.json") else {return}
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let data = data {
+                guard let jsonArray = try? JSONSerialization.jsonObject(with: data, options: []) as? Array<JSON> else {return}
+                    for i in 0..<jsonArray.count{
+                    let movie = Movie(context: self.context)
+                    movie.title = jsonArray[i]["title"] as? String
+                    movie.image = jsonArray[i]["image"] as? String
+                    movie.rating = jsonArray[i]["rating"] as? Double ?? 0.0
+                    movie.releaseYear = jsonArray[i]["releaseYear"] as? Int32 ?? 0
+                    for string in jsonArray[i]["genre"] as? [String] ?? []{
+                        let genre = Genre(context: self.context)
+                        genre.genre = string
+                        movie.addToGenres(genre)
+                    }
+                }
+                CoreDataStack.shared.saveContext()
             }
-        }
-        CoreDataStack.shared.saveContext()
+            DispatchQueue.main.async {
+                self.fetchAllMovies(delegate: delegate)
+            }
+        }.resume()
     }
-    
-    
 }
 
 protocol DAODelegate {
